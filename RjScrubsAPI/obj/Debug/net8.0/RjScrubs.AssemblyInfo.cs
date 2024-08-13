@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f318aaafe2174c16ac44f22da807a0717fc79a61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a2a3691cd31d3178bd56d4738ab782071043e27")]
 [assembly: System.Reflection.AssemblyProductAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

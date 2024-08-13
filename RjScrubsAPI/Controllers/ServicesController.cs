@@ -34,7 +34,7 @@ namespace RjScrubs.Controllers
                 Description = model.Description,
                 Price = model.Price,
                 Duration = model.Duration,
-                Availability = model.Availability
+                IsAvailable = model.IsAvailable // Change this if your Service model uses 'IsAvailable'
             };
 
             _context.Services.Add(service);
@@ -84,7 +84,7 @@ namespace RjScrubs.Controllers
             service.Description = model.Description;
             service.Price = model.Price;
             service.Duration = model.Duration;
-            service.Availability = model.Availability;
+            service.IsAvailable = model.IsAvailable;
 
             _context.Services.Update(service);
             await _context.SaveChangesAsync();

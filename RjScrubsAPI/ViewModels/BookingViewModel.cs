@@ -19,9 +19,10 @@ namespace RjScrubs.ViewModels
         [Required]
         [DataType(DataType.DateTime)]
         [Display(Name = "Booking Date & Time")]
-        public DateTime BookingDateTime { get; internal set; } // Date and time of the booking
+        public DateTime BookingDate { get; set; } // Date and time of the booking
 
         [Required]
+        [StringLength(50)]
         [Display(Name = "Booking Status")]
         public string Status { get; set; } // Status of the booking (e.g., Pending, Confirmed, Completed, Cancelled)
 
@@ -31,6 +32,5 @@ namespace RjScrubs.ViewModels
 
         [DataType(DataType.Currency)]
         public decimal? TotalPrice { get; set; } // Total price for the booking (optional)
-        public DateTime BookingDate { get; internal set; }
     }
 }

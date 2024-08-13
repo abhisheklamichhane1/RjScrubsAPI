@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace RjScrubs.Models
 {
@@ -11,16 +12,19 @@ namespace RjScrubs.Models
         // Address of the user
         public string Address { get; set; }
 
-        // Additional information (e.g., phone number, profile picture URL, etc.)
+        // Profile picture URL
         public string ProfilePictureUrl { get; set; }
 
-        // Date of birth
-        public DateTime DateOfBirth { get; set; }
+        // Date of birth (nullable if optional)
+        public DateTime? DateOfBirth { get; set; }
 
-        // Optional: Add other properties as needed
-        // Additional properties for profile update
+        // City where the user resides
         public string City { get; set; }
+
+        // State where the user resides
         public string State { get; set; }
+
+        // Zip code for the user's address
         public string ZipCode { get; set; }
     }
 }

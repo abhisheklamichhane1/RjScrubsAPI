@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RjScrubs.Data;
 
@@ -35,7 +34,7 @@ namespace RjScrubs.Controllers
                 Description = model.Description,
                 Price = model.Price,
                 Duration = model.Duration,
-                Availability = model.Availability
+                IsAvailable = model.IsAvailable // Map Availability to IsAvailable
             };
 
             _context.Services.Add(service);
@@ -70,7 +69,7 @@ namespace RjScrubs.Controllers
             service.Description = model.Description;
             service.Price = model.Price;
             service.Duration = model.Duration;
-            service.Availability = model.Availability;
+            service.IsAvailable = model.IsAvailable; // Map Availability to IsAvailable
 
             _context.Services.Update(service);
             await _context.SaveChangesAsync();
@@ -100,7 +99,10 @@ namespace RjScrubs.Controllers
         [HttpGet("bookings")]
         public async Task<IActionResult> GetAllBookings()
         {
-            var bookings = await _context.Bookings.ToListAsync();
+            var bookings = await _context.Bookings
+                .Include(b => b.Service) // Optionally include related data
+                .Include(b => b.User)
+                .ToListAsync();
             return Ok(bookings);
         }
 
@@ -108,7 +110,11 @@ namespace RjScrubs.Controllers
         [HttpGet("bookings/{id}")]
         public async Task<IActionResult> GetBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _context.Bookings
+                .Include(b => b.Service) // Optionally include related data
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(b => b.Id == id);
+
             if (booking == null)
                 return NotFound();
 
