@@ -1,13 +1,10 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RjScrubs.Data;
 using RjScrubs.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,7 +39,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

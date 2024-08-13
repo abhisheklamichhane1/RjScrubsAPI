@@ -44,9 +44,8 @@ namespace RjScrubs.Data
             // Customizing the Booking entity
             modelBuilder.Entity<Booking>(entity =>
             {
-                entity.Property(e => e.Date).IsRequired();
-                entity.Property(e => e.Time).IsRequired();
-                // Additional configurations
+                entity.Property(e => e.BookingDate).IsRequired();
+               
             });
 
             // Customizing the Payment entity
@@ -59,7 +58,7 @@ namespace RjScrubs.Data
             // Customizing the Notification entity
             modelBuilder.Entity<Notification>(entity =>
             {
-                entity.Property(e => e.Message).HasMaxLength(1000);
+                entity.Property(e => e.Body).HasMaxLength(1000);
                 // Additional configurations
             });
 

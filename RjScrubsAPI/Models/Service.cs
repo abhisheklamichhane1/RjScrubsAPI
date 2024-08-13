@@ -39,6 +39,8 @@ namespace RjScrubs.Models
         [StringLength(50, ErrorMessage = "Category name cannot exceed 50 characters.")]
         public string Category { get; set; }
 
+        public string ServiceName { get; set; }
+
         // Navigation property for bookings
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8b4419e9-ef71-4223-906d-98ef8f8786c6")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0659ddfa1390ebb00fa0917dcbcb9321907bff2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c0435b1ae2aaf9cbc7bb62f02044ad1cee93336")]
 [assembly: System.Reflection.AssemblyProductAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RjScrubs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

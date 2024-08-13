@@ -1,20 +1,22 @@
 ﻿using System.Text;
 using RjScrubs.Models;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace RjScrubs.Services
 {
-    // Service for handling report generation
     public class ReportService
     {
         // Generates a CSV report of bookings
         public async Task<string> GenerateBookingsReportAsync(IEnumerable<Booking> bookings)
         {
             var csv = new StringBuilder();
-            csv.AppendLine("Id,CustomerName,ServiceName,BookingDate,Status");
+            csv.AppendLine("Id,CustomerName,BookingDate,Status");
 
             foreach (var booking in bookings)
             {
-                csv.AppendLine($"{booking.Id},{booking.CustomerName},{booking.ServiceName},{booking.BookingDate.ToShortDateString()},{booking.Status}");
+                csv.AppendLine($"{booking.Id},{booking.CustomerName},{booking.BookingDate.ToShortDateString()},{booking.Status}");
             }
 
             // Save the report to a file or return it as a string
@@ -32,6 +34,7 @@ namespace RjScrubs.Services
 
             foreach (var service in services)
             {
+                // Ensure these properties are present in the Service model
                 csv.AppendLine($"{service.Id},{service.ServiceName},{service.Price},{service.Description}");
             }
 

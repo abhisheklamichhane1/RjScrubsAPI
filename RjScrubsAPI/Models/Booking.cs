@@ -43,5 +43,8 @@ namespace RjScrubs.Models
         // Total price for the booking (optional)
         [DataType(DataType.Currency)]
         public decimal? TotalPrice { get; set; }
+
+        public string CustomerName { get; set; } // This property should exist
+        public string ServiceName { get; set; } // This should be defined
     }
 }
