@@ -1,62 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\rjscrubs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\rjscrubs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\rjscrubs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubsAPI.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubsAPI.csproj|solutionrelative:rjscrubsapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubsAPI.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubsAPI.csproj|solutionrelative:rjscrubsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\source\\repos\\rjscrubsapi\\rjscrubsapi\\rjscrubsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\rjscrubsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\rjscrubsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|c:\\users\\lamic\\onedrive\\documents\\github\\rjscrubsapi\\rjscrubsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EF6981-F6BE-4D59-AF2D-570C51EC345E}|RjScrubsAPI\\RjScrubs.csproj|solutionrelative:rjscrubsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,15 +78,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Report.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Report.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\Report.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Report.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Models\\Report.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:33:00.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Notification.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Models\\Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:32:03.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Payment.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Models\\Payment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:30:45.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\Booking.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Booking.cs",
               "RelativeToolTip": "RjScrubsAPI\\Models\\Booking.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,172 +134,160 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\Service.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Service.cs",
               "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\Service.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\Service.cs",
               "RelativeToolTip": "RjScrubsAPI\\Models\\Service.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:18:26.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:18:26.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "RjScrubsAPI\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Models\\ApplicationUser.cs",
               "RelativeToolTip": "RjScrubsAPI\\Models\\ApplicationUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:17:15.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:17:15.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RjScrubs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
+              "DocumentIndex": 0,
+              "Title": "RjScrubs.csproj",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
               "RelativeDocumentMoniker": "RjScrubsAPI\\RjScrubs.csproj",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
               "RelativeToolTip": "RjScrubsAPI\\RjScrubs.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-13T13:16:36.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ReportsController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ReportsController.cs",
               "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\ReportsController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ReportsController.cs",
               "RelativeToolTip": "RjScrubsAPI\\Controllers\\ReportsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:15:40.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotificationsController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\NotificationsController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\NotificationsController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\NotificationsController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\NotificationsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:14:36.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PaymentsController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\PaymentsController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\PaymentsController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\PaymentsController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\PaymentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:13:34.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BookingsController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\BookingsController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\BookingsController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\BookingsController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\BookingsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:12:37.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:15:40.586Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ServicesController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ServicesController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\ServicesController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ServicesController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\ServicesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\NotificationsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:10:44.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:14:36.358Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAyAAAA",
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\PaymentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:09:14.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\WeatherForecast.cs",
-              "RelativeToolTip": "RjScrubsAPI\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:01:35.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RjScrubsAPI.http",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubsAPI.http",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\RjScrubsAPI.http",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubsAPI.http",
-              "RelativeToolTip": "RjScrubsAPI\\RjScrubsAPI.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-08-13T13:01:34.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:13:34.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "RjScrubsAPI\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAkwAwAAAAeAAAA",
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\BookingsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T13:00:19.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T13:12:37.598Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "ServicesController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ServicesController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\ServicesController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\ServicesController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\ServicesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:10:44.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:09:14.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\WeatherForecast.cs",
+              "RelativeToolTip": "RjScrubsAPI\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:01:35.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RjScrubsAPI.http",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubsAPI.http",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\RjScrubsAPI.http",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubsAPI.http",
+              "RelativeToolTip": "RjScrubsAPI\\RjScrubsAPI.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-13T13:01:34.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "RjScrubsAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "RjScrubsAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAkwAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T13:00:19.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Program.cs",
               "RelativeDocumentMoniker": "RjScrubsAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\Program.cs",
               "RelativeToolTip": "RjScrubsAPI\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T12:59:16.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T12:59:16.708Z"
             }
           ]
         }

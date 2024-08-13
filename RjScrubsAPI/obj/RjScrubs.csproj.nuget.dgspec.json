@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj": {}
+    "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj": {
+    "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
+        "projectUniqueName": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
         "projectName": "RjScrubs",
-        "projectPath": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
+        "projectPath": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\RjScrubs.csproj",
         "packagesPath": "C:\\Users\\lamic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lamic\\source\\repos\\RjScrubsAPI\\RjScrubsAPI\\obj\\",
+        "outputPath": "C:\\Users\\lamic\\OneDrive\\Documents\\GitHub\\RjScrubsAPI\\RjScrubsAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
