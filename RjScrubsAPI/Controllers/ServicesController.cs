@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
-using Microsoft.EntityFrameworkCore;
+using RjScrubs.Repositories; // Make sure to include the namespace for the repository
 using Microsoft.AspNetCore.Authorization;
-using RjScrubs.Data;
 
 namespace RjScrubs.Controllers
 {
@@ -11,11 +10,11 @@ namespace RjScrubs.Controllers
     [ApiController]
     public class ServicesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IServiceRepository _serviceRepository;
 
-        public ServicesController(ApplicationDbContext context)
+        public ServicesController(IServiceRepository serviceRepository)
         {
-            _context = context;
+            _serviceRepository = serviceRepository;
         }
 
         #region CRUD Operations
@@ -28,17 +27,7 @@ namespace RjScrubs.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = new Service
-            {
-                Name = model.Name,
-                Description = model.Description,
-                Price = model.Price,
-                Duration = model.Duration,
-                IsAvailable = model.IsAvailable // Change this if your Service model uses 'IsAvailable'
-            };
-
-            _context.Services.Add(service);
-            await _context.SaveChangesAsync();
+            var service = await _serviceRepository.CreateServiceAsync(model);
 
             return CreatedAtAction(nameof(GetService), new { id = service.Id }, service);
         }
@@ -47,7 +36,7 @@ namespace RjScrubs.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllServices()
         {
-            var services = await _context.Services.ToListAsync();
+            var services = await _serviceRepository.GetAllServicesAsync();
 
             if (services == null || !services.Any())
                 return NotFound("No services found.");
@@ -59,7 +48,7 @@ namespace RjScrubs.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetService(int id)
         {
-            var service = await _context.Services.FindAsync(id);
+            var service = await _serviceRepository.GetServiceByIdAsync(id);
 
             if (service == null)
                 return NotFound("Service not found.");
@@ -75,19 +64,10 @@ namespace RjScrubs.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = await _context.Services.FindAsync(id);
+            var service = await _serviceRepository.UpdateServiceAsync(id, model);
 
             if (service == null)
                 return NotFound("Service not found.");
-
-            service.Name = model.Name;
-            service.Description = model.Description;
-            service.Price = model.Price;
-            service.Duration = model.Duration;
-            service.IsAvailable = model.IsAvailable;
-
-            _context.Services.Update(service);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
@@ -97,13 +77,10 @@ namespace RjScrubs.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteService(int id)
         {
-            var service = await _context.Services.FindAsync(id);
+            var result = await _serviceRepository.DeleteServiceAsync(id);
 
-            if (service == null)
+            if (!result)
                 return NotFound("Service not found.");
-
-            _context.Services.Remove(service);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }

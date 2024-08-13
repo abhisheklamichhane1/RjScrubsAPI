@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace RjScrubs.Models
 {
@@ -28,6 +27,7 @@ namespace RjScrubs.Models
         // Duration of the service in minutes
         [Required]
         [Display(Name = "Duration (in minutes)")]
+        [Range(1, int.MaxValue, ErrorMessage = "Duration must be at least 1 minute.")]
         public int Duration { get; set; }
 
         // Indicates if the service is available
