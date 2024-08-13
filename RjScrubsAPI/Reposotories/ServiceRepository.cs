@@ -2,9 +2,6 @@
 using RjScrubs.Data;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RjScrubs.Repositories
 {

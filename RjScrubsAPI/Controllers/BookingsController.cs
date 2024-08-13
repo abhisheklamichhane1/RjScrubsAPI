@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
-using RjScrubs.Data;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
+using RjScrubs.Repositories;
 
 namespace RjScrubs.Controllers
 {
@@ -11,16 +10,15 @@ namespace RjScrubs.Controllers
     [ApiController]
     public class BookingsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IBookingRepository _bookingRepository;
 
-        public BookingsController(ApplicationDbContext context)
+        public BookingsController(IBookingRepository bookingRepository)
         {
-            _context = context;
+            _bookingRepository = bookingRepository;
         }
 
         #region Booking Operations
 
-        // Create a new booking
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> CreateBooking([FromBody] BookingViewModel model)
@@ -28,11 +26,9 @@ namespace RjScrubs.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = await _context.Services.FindAsync(model.ServiceId);
+            var service = await _bookingRepository.GetBookingByIdAsync(model.ServiceId);
             if (service == null)
                 return NotFound("Service not found.");
-
-            // Optionally check if the user exists and is authenticated
 
             var booking = new Booking
             {
@@ -44,44 +40,32 @@ namespace RjScrubs.Controllers
                 TotalPrice = model.TotalPrice
             };
 
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
-
+            await _bookingRepository.AddBookingAsync(booking);
             return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
 
-        // Get all bookings for a user
         [HttpGet("user/{userId}")]
         [Authorize]
         public async Task<IActionResult> GetUserBookings(string userId)
         {
-            var bookings = await _context.Bookings
-                .Include(b => b.Service)
-                .Where(b => b.UserId == userId)
-                .ToListAsync();
-
+            var bookings = await _bookingRepository.GetBookingsByUserIdAsync(userId);
             if (bookings == null || !bookings.Any())
                 return NotFound("No bookings found for this user.");
 
             return Ok(bookings);
         }
 
-        // Get a booking by ID
         [HttpGet("{id}")]
         [Authorize]
         public async Task<IActionResult> GetBooking(int id)
         {
-            var booking = await _context.Bookings
-                .Include(b => b.Service)
-                .FirstOrDefaultAsync(b => b.Id == id);
-
+            var booking = await _bookingRepository.GetBookingByIdAsync(id);
             if (booking == null)
                 return NotFound("Booking not found.");
 
             return Ok(booking);
         }
 
-        // Update a booking (e.g., reschedule)
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> UpdateBooking(int id, [FromBody] BookingViewModel model)
@@ -89,12 +73,12 @@ namespace RjScrubs.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _bookingRepository.GetBookingByIdAsync(id);
             if (booking == null)
                 return NotFound("Booking not found.");
 
-            var service = await _context.Services.FindAsync(model.ServiceId);
-            if (service == null || !IsAvailable(service, model.BookingDate))
+            var service = await _bookingRepository.IsServiceAvailableAsync(model.ServiceId, model.BookingDate);
+            if (!service)
                 return BadRequest("Service is not available at the selected time.");
 
             booking.ServiceId = model.ServiceId;
@@ -103,35 +87,16 @@ namespace RjScrubs.Controllers
             booking.Notes = model.Notes;
             booking.TotalPrice = model.TotalPrice;
 
-            _context.Bookings.Update(booking);
-            await _context.SaveChangesAsync();
-
+            await _bookingRepository.UpdateBookingAsync(booking);
             return NoContent();
         }
 
-        // Cancel a booking
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> CancelBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
-            if (booking == null)
-                return NotFound("Booking not found.");
-
-            _context.Bookings.Remove(booking);
-            await _context.SaveChangesAsync();
-
+            await _bookingRepository.DeleteBookingAsync(id);
             return NoContent();
-        }
-
-        #endregion
-
-        #region Helper Methods
-
-        private bool IsAvailable(Service service, DateTime bookingDate)
-        {
-            // Implement actual availability check logic here
-            return !_context.Bookings.Any(b => b.ServiceId == service.Id && b.BookingDate == bookingDate);
         }
 
         #endregion

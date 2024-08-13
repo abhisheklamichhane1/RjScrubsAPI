@@ -24,10 +24,10 @@
         // Status of the payment (e.g., Completed, Pending, Failed)
         public string Status { get; set; }
 
-        // Optional: Transaction ID from the payment gateway
+        // Transaction ID from the payment gateway
         public string TransactionId { get; set; }
 
-        // Optional: Additional properties for payment-related details
+        // Additional properties for payment-related details
         public string Notes { get; set; }
     }
 }
