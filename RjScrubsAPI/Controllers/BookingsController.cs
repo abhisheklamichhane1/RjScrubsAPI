@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using RjScrubs.Data;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RjScrubs.Controllers
 {
@@ -34,12 +32,16 @@ namespace RjScrubs.Controllers
             if (service == null)
                 return NotFound("Service not found.");
 
+            // Optionally check if the user exists and is authenticated
+
             var booking = new Booking
             {
                 ServiceId = model.ServiceId,
                 UserId = model.UserId,
-                BookingDate = model.BookingDate, // Ensure this property is used correctly
-                Status = model.Status
+                BookingDate = model.BookingDate,
+                Status = model.Status,
+                Notes = model.Notes,
+                TotalPrice = model.TotalPrice
             };
 
             _context.Bookings.Add(booking);
@@ -47,7 +49,6 @@ namespace RjScrubs.Controllers
 
             return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
-
 
         // Get all bookings for a user
         [HttpGet("user/{userId}")]
@@ -92,13 +93,15 @@ namespace RjScrubs.Controllers
             if (booking == null)
                 return NotFound("Booking not found.");
 
-            // Check if the service exists and is available
             var service = await _context.Services.FindAsync(model.ServiceId);
             if (service == null || !IsAvailable(service, model.BookingDate))
                 return BadRequest("Service is not available at the selected time.");
 
             booking.ServiceId = model.ServiceId;
             booking.BookingDate = model.BookingDate;
+            booking.Status = model.Status;
+            booking.Notes = model.Notes;
+            booking.TotalPrice = model.TotalPrice;
 
             _context.Bookings.Update(booking);
             await _context.SaveChangesAsync();
@@ -128,7 +131,6 @@ namespace RjScrubs.Controllers
         private bool IsAvailable(Service service, DateTime bookingDate)
         {
             // Implement actual availability check logic here
-            // Example placeholder logic: check if the service is booked at the requested time
             return !_context.Bookings.Any(b => b.ServiceId == service.Id && b.BookingDate == bookingDate);
         }
 

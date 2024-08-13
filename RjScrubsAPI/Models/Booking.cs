@@ -39,5 +39,9 @@ namespace RjScrubs.Models
         [StringLength(500)]
         [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
+
+        // Total price for the booking (optional)
+        [DataType(DataType.Currency)]
+        public decimal? TotalPrice { get; set; }
     }
 }
