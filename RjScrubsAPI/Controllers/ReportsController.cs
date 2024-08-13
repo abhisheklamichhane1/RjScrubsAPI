@@ -24,9 +24,12 @@ namespace RjScrubs.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetBookingsReport([FromQuery] ReportFilterViewModel filter)
         {
+            if (filter == null)
+                return BadRequest("Invalid filter parameters.");
+
             var report = await _reportService.GetBookingsReportAsync(filter);
 
-            if (report == null)
+            if (report == null || report.Count == 0)
                 return NotFound("No report data found.");
 
             return Ok(report);
@@ -37,9 +40,12 @@ namespace RjScrubs.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetRevenueReport([FromQuery] ReportFilterViewModel filter)
         {
+            if (filter == null)
+                return BadRequest("Invalid filter parameters.");
+
             var report = await _reportService.GetRevenueReportAsync(filter);
 
-            if (report == null)
+            if (report == null || report.Count == 0)
                 return NotFound("No report data found.");
 
             return Ok(report);

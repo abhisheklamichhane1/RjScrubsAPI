@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using RjScrubs.Data;
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 
 namespace RjScrubs.Controllers
 {
@@ -22,30 +24,30 @@ namespace RjScrubs.Controllers
 
         // Create a new booking
         [HttpPost]
-        [Authorize] // Any authenticated user can book a service
+        [Authorize]
         public async Task<IActionResult> CreateBooking([FromBody] BookingViewModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            var service = await _context.Services.FindAsync(model.ServiceId);
+            if (service == null)
+                return NotFound("Service not found.");
+
             var booking = new Booking
             {
                 ServiceId = model.ServiceId,
                 UserId = model.UserId,
-                BookingDate = model.BookingDate,
-                Status = BookingStatus.Pending // Default status
+                BookingDate = model.BookingDate, // Ensure this property is used correctly
+                Status = model.Status
             };
-
-            // Check service availability
-            var service = await _context.Services.FindAsync(model.ServiceId);
-            if (service == null || !IsAvailable(service, model.BookingDate))
-                return BadRequest("Service is not available at the selected time.");
 
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
+
 
         // Get all bookings for a user
         [HttpGet("user/{userId}")]
@@ -58,7 +60,7 @@ namespace RjScrubs.Controllers
                 .ToListAsync();
 
             if (bookings == null || !bookings.Any())
-                return NotFound();
+                return NotFound("No bookings found for this user.");
 
             return Ok(bookings);
         }
@@ -73,7 +75,7 @@ namespace RjScrubs.Controllers
                 .FirstOrDefaultAsync(b => b.Id == id);
 
             if (booking == null)
-                return NotFound();
+                return NotFound("Booking not found.");
 
             return Ok(booking);
         }
@@ -88,9 +90,9 @@ namespace RjScrubs.Controllers
 
             var booking = await _context.Bookings.FindAsync(id);
             if (booking == null)
-                return NotFound();
+                return NotFound("Booking not found.");
 
-            // Check service availability
+            // Check if the service exists and is available
             var service = await _context.Services.FindAsync(model.ServiceId);
             if (service == null || !IsAvailable(service, model.BookingDate))
                 return BadRequest("Service is not available at the selected time.");
@@ -111,7 +113,7 @@ namespace RjScrubs.Controllers
         {
             var booking = await _context.Bookings.FindAsync(id);
             if (booking == null)
-                return NotFound();
+                return NotFound("Booking not found.");
 
             _context.Bookings.Remove(booking);
             await _context.SaveChangesAsync();
@@ -125,8 +127,8 @@ namespace RjScrubs.Controllers
 
         private bool IsAvailable(Service service, DateTime bookingDate)
         {
-            // Implement availability check logic here
-            // This is a placeholder and should be replaced with actual logic
+            // Implement actual availability check logic here
+            // Example placeholder logic: check if the service is booked at the requested time
             return !_context.Bookings.Any(b => b.ServiceId == service.Id && b.BookingDate == bookingDate);
         }
 

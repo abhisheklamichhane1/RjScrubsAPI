@@ -2,8 +2,8 @@
 using RjScrubs.Models;
 using RjScrubs.ViewModels;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using RjScrubs.Data;
 
 namespace RjScrubs.Controllers
 {
@@ -22,7 +22,7 @@ namespace RjScrubs.Controllers
 
         // Create a new service
         [HttpPost]
-        [Authorize(Roles = "Admin")] // Only admins can create services
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateService([FromBody] ServiceViewModel model)
         {
             if (!ModelState.IsValid)
@@ -48,6 +48,10 @@ namespace RjScrubs.Controllers
         public async Task<IActionResult> GetAllServices()
         {
             var services = await _context.Services.ToListAsync();
+
+            if (services == null || !services.Any())
+                return NotFound("No services found.");
+
             return Ok(services);
         }
 
@@ -56,23 +60,25 @@ namespace RjScrubs.Controllers
         public async Task<IActionResult> GetService(int id)
         {
             var service = await _context.Services.FindAsync(id);
+
             if (service == null)
-                return NotFound();
+                return NotFound("Service not found.");
 
             return Ok(service);
         }
 
         // Update a service
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")] // Only admins can update services
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateService(int id, [FromBody] ServiceViewModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = await _context.Services.FindAsync(id);
+
             if (service == null)
-                return NotFound();
+                return NotFound("Service not found.");
 
             service.Name = model.Name;
             service.Description = model.Description;
@@ -88,12 +94,13 @@ namespace RjScrubs.Controllers
 
         // Delete a service
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")] // Only admins can delete services
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteService(int id)
         {
             var service = await _context.Services.FindAsync(id);
+
             if (service == null)
-                return NotFound();
+                return NotFound("Service not found.");
 
             _context.Services.Remove(service);
             await _context.SaveChangesAsync();

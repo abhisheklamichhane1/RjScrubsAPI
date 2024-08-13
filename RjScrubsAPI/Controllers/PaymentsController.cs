@@ -4,6 +4,8 @@ using RjScrubs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using RjScrubs.Data;
+using RjScrubs.Services;
 
 namespace RjScrubs.Controllers
 {
@@ -24,7 +26,7 @@ namespace RjScrubs.Controllers
 
         // Process a payment
         [HttpPost("process")]
-        [Authorize]
+        [Authorize] // Any authenticated user can process a payment
         public async Task<IActionResult> ProcessPayment([FromBody] PaymentViewModel model)
         {
             if (!ModelState.IsValid)
@@ -40,7 +42,7 @@ namespace RjScrubs.Controllers
             var result = await _paymentService.ProcessPaymentAsync(model.Amount, model.PaymentMethod, booking);
 
             if (!result.Success)
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(new { message = result.ErrorMessage });
 
             booking.Status = BookingStatus.Paid;
             _context.Bookings.Update(booking);
@@ -51,14 +53,14 @@ namespace RjScrubs.Controllers
 
         // Retrieve payment details (optional)
         [HttpGet("{id}")]
-        [Authorize]
+        [Authorize] // Any authenticated user can retrieve payment details
         public async Task<IActionResult> GetPayment(int id)
         {
             // This assumes you have a Payment model and related data
             var payment = await _context.Payments.FindAsync(id);
 
             if (payment == null)
-                return NotFound();
+                return NotFound("Payment not found.");
 
             return Ok(payment);
         }

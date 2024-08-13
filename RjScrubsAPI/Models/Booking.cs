@@ -19,7 +19,7 @@
         public ApplicationUser User { get; set; }
 
         // Date and time when the booking is scheduled
-        public DateTime BookingDate { get; set; }
+        public DateTime BookingDate { get; internal set; }
 
         // Status of the booking (e.g., Confirmed, Pending, Canceled)
         public string Status { get; set; }

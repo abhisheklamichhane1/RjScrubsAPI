@@ -5,3 +5,11 @@ C:\Users\lamic\source\repos\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.As
 C:\Users\lamic\source\repos\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.csproj.CoreCompileInputs.cache
 C:\Users\lamic\source\repos\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lamic\source\repos\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.csproj.AssemblyReference.cache
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.AssemblyInfoInputs.cache
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.AssemblyInfo.cs
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.csproj.CoreCompileInputs.cache
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lamic\OneDrive\Documents\GitHub\RjScrubsAPI\RjScrubsAPI\obj\Debug\net8.0\RjScrubs.sourcelink.json

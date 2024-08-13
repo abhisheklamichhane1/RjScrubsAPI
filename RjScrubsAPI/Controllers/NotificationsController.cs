@@ -23,7 +23,7 @@ namespace RjScrubs.Controllers
 
         // Send an email notification
         [HttpPost("send-email")]
-        [Authorize]
+        [Authorize] // Any authenticated user can send an email notification
         public async Task<IActionResult> SendEmailNotification([FromBody] EmailNotificationViewModel model)
         {
             if (!ModelState.IsValid)
@@ -32,7 +32,7 @@ namespace RjScrubs.Controllers
             var result = await _emailService.SendEmailAsync(model.ToAddress, model.Subject, model.Body);
 
             if (!result.Success)
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(new { message = result.ErrorMessage });
 
             return Ok(new { message = "Email sent successfully." });
         }
@@ -43,7 +43,7 @@ namespace RjScrubs.Controllers
 
         // Send an SMS notification
         [HttpPost("send-sms")]
-        [Authorize]
+        [Authorize] // Any authenticated user can send an SMS notification
         public async Task<IActionResult> SendSmsNotification([FromBody] SmsNotificationViewModel model)
         {
             if (!ModelState.IsValid)
@@ -52,7 +52,7 @@ namespace RjScrubs.Controllers
             var result = await _smsService.SendSmsAsync(model.ToNumber, model.Message);
 
             if (!result.Success)
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(new { message = result.ErrorMessage });
 
             return Ok(new { message = "SMS sent successfully." });
         }

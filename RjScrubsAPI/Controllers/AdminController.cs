@@ -4,6 +4,7 @@ using RjScrubs.Models;
 using RjScrubs.ViewModels;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using RjScrubs.Data;
 
 namespace RjScrubs.Controllers
 {

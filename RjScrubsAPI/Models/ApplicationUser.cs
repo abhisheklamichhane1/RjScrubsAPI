@@ -18,5 +18,9 @@ namespace RjScrubs.Models
         public DateTime DateOfBirth { get; set; }
 
         // Optional: Add other properties as needed
+        // Additional properties for profile update
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
     }
 }

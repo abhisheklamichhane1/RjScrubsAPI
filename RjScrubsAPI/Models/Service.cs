@@ -25,6 +25,7 @@
         public string Category { get; set; }
 
         // Optional: Add other properties as needed
+        public bool Availability { get; set; } // Ensure this property exists
 
         // Navigation property for bookings (if needed)
         public ICollection<Booking> Bookings { get; set; }
