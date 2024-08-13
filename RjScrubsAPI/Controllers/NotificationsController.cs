@@ -1,62 +1,116 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RjScrubs.Services;
+using RjScrubs.Models;
+using RjScrubs.Repositories;
 using RjScrubs.ViewModels;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+
 
 namespace RjScrubs.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NotificationsController : ControllerBase
+    public class NotificationController : ControllerBase
     {
-        private readonly IEmailService _emailService;
-        private readonly ISmsService _smsService;
+        private readonly INotificationRepository _notificationRepository;
 
-        public NotificationsController(IEmailService emailService, ISmsService smsService)
+        public NotificationController(INotificationRepository notificationRepository)
         {
-            _emailService = emailService;
-            _smsService = smsService;
+            _notificationRepository = notificationRepository;
         }
 
-        #region Email Notifications
-
-        // Send an email notification
-        [HttpPost("send-email")]
-        [Authorize] // Any authenticated user can send an email notification
-        public async Task<IActionResult> SendEmailNotification([FromBody] EmailNotificationViewModel model)
+        // Get all notifications
+        [HttpGet]
+        public async Task<IActionResult> GetAllNotifications()
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var result = await _emailService.SendEmailAsync(model.ToAddress, model.Subject, model.Body);
-
-            if (!result.Success)
-                return BadRequest(new { message = result.ErrorMessage });
-
-            return Ok(new { message = "Email sent successfully." });
+            var notifications = await _notificationRepository.GetAllNotificationsAsync();
+            return Ok(notifications);
         }
 
-        #endregion
+        // Get notification by ID
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetNotificationById(int id)
+        {
+            var notification = await _notificationRepository.GetNotificationByIdAsync(id);
+            if (notification == null)
+                return NotFound(new { message = "Notification not found." });
 
-        #region SMS Notifications
+            return Ok(notification);
+        }
 
-        // Send an SMS notification
-        [HttpPost("send-sms")]
-        [Authorize] // Any authenticated user can send an SMS notification
-        public async Task<IActionResult> SendSmsNotification([FromBody] SmsNotificationViewModel model)
+        // Create a new notification
+        [HttpPost]
+        public async Task<IActionResult> CreateNotification([FromBody] NotificationViewModel model)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return BadRequest(new { message = "Invalid notification details.", errors = ModelState });
 
-            var result = await _smsService.SendSmsAsync(model.ToNumber, model.Message);
+            var notification = new Notification
+            {
+                Recipient = model.Recipient,
+                NotificationType = model.NotificationType, // Ensure this matches the model's type
+                Subject = model.Subject,
+                Body = model.Message,
+                SentDate = model.SentDateTime,
+                Status = model.Status,
+                Metadata = model.ReferenceId
+            };
 
-            if (!result.Success)
-                return BadRequest(new { message = result.ErrorMessage });
+            await _notificationRepository.AddNotificationAsync(notification);
 
-            return Ok(new { message = "SMS sent successfully." });
+            return CreatedAtAction(nameof(GetNotificationById), new { id = notification.Id }, notification);
         }
 
-        #endregion
+
+        // Update an existing notification
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateNotification(int id, [FromBody] NotificationViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(new { message = "Invalid notification details.", errors = ModelState });
+
+            var notification = await _notificationRepository.GetNotificationByIdAsync(id);
+            if (notification == null)
+                return NotFound(new { message = "Notification not found." });
+
+            notification.Recipient = model.Recipient;
+            notification.NotificationType = model.NotificationType;
+            notification.Subject = model.Subject;
+            notification.Body = model.Message;
+            notification.SentDate = model.SentDateTime;
+            notification.Status = model.Status;
+            notification.Metadata = model.ReferenceId;
+
+            await _notificationRepository.UpdateNotificationAsync(notification);
+
+            return NoContent();
+        }
+
+        // Delete a notification
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteNotification(int id)
+        {
+            var notification = await _notificationRepository.GetNotificationByIdAsync(id);
+            if (notification == null)
+                return NotFound(new { message = "Notification not found." });
+
+            await _notificationRepository.DeleteNotificationAsync(id);
+
+            return NoContent();
+        }
+
+        // Get notifications by status
+        [HttpGet("status/{status}")]
+        public async Task<IActionResult> GetNotificationsByStatus(RjScrubs.Models.NotificationStatus status)
+        {
+            var notifications = await _notificationRepository.GetNotificationsByStatusAsync(status);
+            return Ok(notifications);
+        }
+
+        // Get notifications by recipient
+        [HttpGet("recipient/{recipient}")]
+        public async Task<IActionResult> GetNotificationsByRecipient(string recipient)
+        {
+            var notifications = await _notificationRepository.GetNotificationsByRecipientAsync(recipient);
+            return Ok(notifications);
+        }
     }
 }

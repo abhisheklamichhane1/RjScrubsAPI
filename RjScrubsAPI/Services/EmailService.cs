@@ -1,7 +1,5 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 
 namespace RjScrubs.Services
 {
@@ -9,38 +7,49 @@ namespace RjScrubs.Services
     public class EmailService
     {
         private readonly IConfiguration _configuration;
+        private readonly ILogger<EmailService> _logger; // Logger for diagnostics
         private readonly string _smtpServer;
         private readonly int _smtpPort;
         private readonly string _smtpUser;
         private readonly string _smtpPass;
 
-        public EmailService(IConfiguration configuration)
+        public EmailService(IConfiguration configuration, ILogger<EmailService> logger)
         {
             _configuration = configuration;
+            _logger = logger; // Initialize logger
             _smtpServer = _configuration["EmailSettings:SmtpServer"];
-            _smtpPort = int.Parse(_configuration["EmailSettings:SmtpPort"]);
+            _smtpPort = int.TryParse(_configuration["EmailSettings:SmtpPort"], out var port) ? port : 587; // Default port if parsing fails
             _smtpUser = _configuration["EmailSettings:SmtpUser"];
             _smtpPass = _configuration["EmailSettings:SmtpPass"];
         }
 
         public async Task SendEmailAsync(string toEmail, string subject, string body)
         {
-            using (var client = new SmtpClient(_smtpServer, _smtpPort))
+            var mailMessage = new MailMessage
             {
-                client.Credentials = new NetworkCredential(_smtpUser, _smtpPass);
-                client.EnableSsl = true;
+                From = new MailAddress(_smtpUser),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
+            };
+            mailMessage.To.Add(toEmail);
 
-                var mailMessage = new MailMessage
+            try
+            {
+                using (var client = new SmtpClient(_smtpServer, _smtpPort))
                 {
-                    From = new MailAddress(_smtpUser),
-                    Subject = subject,
-                    Body = body,
-                    IsBodyHtml = true
-                };
+                    client.Credentials = new NetworkCredential(_smtpUser, _smtpPass);
+                    client.EnableSsl = true;
 
-                mailMessage.To.Add(toEmail);
+                    await client.SendMailAsync(mailMessage);
 
-                await client.SendMailAsync(mailMessage);
+                    _logger.LogInformation($"Email sent to {toEmail} with subject '{subject}'.");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to send email to {toEmail}. Subject: '{subject}'. Error: {ex.Message}");
+                // Optionally, rethrow or handle the exception based on your requirements
             }
         }
     }
