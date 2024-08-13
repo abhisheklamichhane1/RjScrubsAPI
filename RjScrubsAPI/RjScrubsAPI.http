@@ -1,0 +1,6 @@
+@RjScrubsAPI_HostAddress = http://localhost:5058
+
+GET {{RjScrubsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
